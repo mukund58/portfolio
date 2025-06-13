@@ -1,50 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>MyBlog</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      corePlugins: {
-        preflight: false
-      }
-    }
-  </script>
-  <style>
-    body{
-      margin: 5;
-      padding: 0;
-    }
-  </style>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{{ get_url(path='logo.jpg') }}">
+        <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+        <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
 
-<body class="bg-white  dark:bg-[#1b1b1b] dark:text-white ">
-  <nav class="bg-white  dark:bg-[#1b1b1b] shadow">
-    <div class=" mx-auto px-4 py-3 flex justify-around flex-col sm:flex-row  items-center">
-      <a href="/" class="text-xl font-bold text-gray-900 dark:text-white  md:space-y-0 md:space-x-4 mt-4 md:mt-0">
-        M
-      </a>
-  
-     
-  
-      <!-- Navigation links -->
-      <div id="menu" class=" md:flex flex-col md:flex-row md:items-center  md:space-y-0 md:space-x-4 mt-4 md:mt-0">
-        <a href="/" class="text-gray-700 dark:text-gray-300 hover:underline">#Home</a>
-        <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:underline">#Blog</a>
-        <a href="/about" class="text-gray-700 dark:text-gray-300 hover:underline">#About</a>
-      </div>
-    </div>
-  
-    <!-- Optional script for mobile toggle -->
-    
-  </nav>
-  
-  
-  <section class="section w-full">
-      {% block content %} {% endblock content %}
-  </section>
-</body>
+        <title>MyBlog</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script defer>
+            tailwind.config = {
+                corePlugins: {
+                    preflight: false
+                },
+                darkMode: 'class',
+            }
+        </script>
+        <style>
+            body {
+                margin: 5;
+                padding: 0;
+            }
+        </style>
+    </head>
 
-</html>
+    <body class="bg-white  dark:bg-[#1c1917] dark:text-white ">
+        <nav class="bg-white text-xl dark:bg-[#1c1917] shadow">
+            <div class=" mx-auto px-4 py-3 flex justify-around flex-col sm:flex-row  items-center">
+                <a href="/" class="text-xl font-bold text-gray-900 dark:text-white  md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+                    <img src="{{ get_url(path='logo.jpg') }}" class="w-12 " alt="">
+                </a>
+
+
+                <!-- Navigation links -->
+                <div id="menu" class=" md:flex flex-col md:flex-row md:items-center  md:space-y-0 md:space-x-4 mt-4 md:mt-0">
+                    <a href="/" class="text-gray-700 dark:text-gray-300 hover:underline">#Home</a>
+                    <a href="/blog" class="text-gray-700 dark:text-gray-300 hover:underline">#Blog</a>
+                    <a href="/about" class="text-gray-700 dark:text-gray-300 hover:underline">#About</a>
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class=" bg-inherit text-white border-none text-lg">
+                        <i class='bxr  bx-moon text-black'></i>
+                        <audio id="toggle-sound" src="{{ get_url(path='sounds/toggle-button.mp3') }}" preload="auto"></audio>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Optional script for mobile toggle -->
+
+        </nav>
+
+
+        <section class="section w-full"> {% block content %}{% endblock content %}
+            </section>
+        </body>
+        <script>
+            const mode = document.getElementById('theme-toggle');
+            const themeIcon = document.querySelector('#theme-toggle i')
+            const userTheme = localStorage.getItem('color-theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const toggleSound = document.getElementById('toggle-sound');
+            const html = document.documentElement;
+            
+            // if (userTheme == 'dark') {
+            //     html.classList.add('dark');
+            //     themeIcon.className = 'bxr  bx-sun ';
+            // } else {
+            //     html.classList.remove('dark');
+            //     themeIcon.className = 'bxr  bx-moon text-black';
+
+            // } 
+            mode.addEventListener('click', () => {
+              toggleSound.currentTime = 0;
+              toggleSound.play();
+              if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+                themeIcon.className = 'bx bx-moon text-black';
+                toggleSound.play();
+              } else {
+                html.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+                themeIcon.className = 'bx bx-sun';
+                toggleSound.play();
+                }
+            });
+        </script>
+    </html>
