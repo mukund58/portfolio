@@ -1,36 +1,92 @@
-
-
 {% extends "base.html" %}
 
 
 {% block content %}
 
 
-  <section class="flex w-58 items-center justify-center gap-8 p-6 md:p-16 dark:bg-stone-900 dak:text-white  shadow-lg mb-10">
-    <div class="wrap max-w-[53rem] flex  flex-col-reverse md:flex-row">
+    <section class="transition-color  duration-300  flex w-58 items-center justify-center gap-8 p-6 md:p-16 dark:bg-stone-900 dak:text-white  shadow-lg mb-10 fade-in-1s">
+        <div class="wrap max-w-[53rem] flex  flex-col-reverse md:flex-row">
 
-      <div class="content ">
-        <h1 class="text-3xl font-bold mb-4">Mukund Parmar</h1>
-        <p class="text-lg leading-relaxed">
-        I am CTO and Lead Developer for Brighton-based web agency Liquid Light. I'm into anything DevOps, SysOps, InfoSec, CI/CD, and anything else to do with web development.
-      </p>
+            <div class="content ">
+                <h1 class="text-3xl font-bold mb-4 fade-in-4s">Mukund Parmar</h1>
+                <p class="text-lg leading-relaxed fade-in-4s">
+                    I am Mukund and Web Developer. I'm into anything DevOps, Backend, Competitive Programming, and anything else to do with web development.
+                </p>
+                <div class="links fade-in-4s flex flex-col md:flex-row align-center gap-[.5rem] ">
+                    <a href="https://github.com/mukund58/" class="  no-underline  dark:text-white text-[#1c1917]" target="_blank">
+                        <div class="github flex items-center gap-[.5rem]">
+                            <i class="bxl bx-github text-3xl "></i>
+                            <span class=" mg-auto">mukund58</span>
+                        </div>
+                    </a>
+                    <a href="mailto:parmarmukund2005@gmail.com" class=" gap-[.5rem] no-underline  dark:text-white text-[#1c1917]" target="_blank">
+                        <div class="github flex items-center gap-[.5rem]">
+                            <i class='bx  bx-at text-3xl'></i>
+                            <span class=" mg-auto">parmarmukund2005@gmail.com</span>
+                        </div>
+                    </a>
+                </a>
+                <a href="https://www.linkedin.com/in/parmarmukund" class=" gap-[.5rem] no-underline  dark:text-white text-[#1c1917]" target="_blank">
+                    <div class="github flex items-center gap-[.5rem]">
+                        <i class='bxl  bx-linkedin-square text-3xl'></i>
+                        <span class=" mg-auto">parmarmukund</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="profile md:w-1/3 flex justify-center align-center">
+            <div class="rounded">
+                <img class="border-[.2rem] border-solid border-[#bbb] rounded-full aspect-square block w-40 md:w-40 p-1" src="https://img.daisyui.com/images/profile/demo/batperson@192.webp" alt="Profile"/>
+            </div>
+        </div>
     </div>
-  
-    <div class="profile md:w-1/3 flex justify-center align-center">
-      <div class="rounded">
-        <img
-        class="border-[.2rem] border-solid border-[#bbb] rounded-full aspect-square block w-40 md:w-40 p-1"
-        src="https://img.daisyui.com/images/profile/demo/batperson@192.webp"
-        alt="Profile"
-        />
-      </div>
-    </div>
-  </div>
-  
-  </section>
-  
-<!--   
-<p class="ml-4 pd-7 text-gray-700 dark:text-gray-300 hover:underline " ><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p> -->
+</section>
 
+<section class="transition-color rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50  duration-300  flex flex-col  w-58 items-center justify-center  p-6 md:p-16 dark:bg-stone-900 dak:text-white  shadow-lg mb-10 fade-in-1s">
+    <!-- component -->
+    <section class="transition-color rounded-lg object-cover object-center  duration-300 flex flex-col w-full items-center justify-center  dark:bg-stone-900 dark:text-white  mb-10 fade-in-1s max-w-[53rem]">
+        <h1 class="text-3xl font-bold mb-6">Work Experience</h1>
 
-{% endblock %}
+        <div class="py-10 container mx-auto px-5">
+            <div class="relative ">
+              <div class="border-r-4 border-white  absolute h-full top-0 z-0" style="left: 9px;"></div>
+              <div class="absolute inset-y-0 left-[9px] w-1 bg-white z-0"></div>
+                <ul class="list-none m-0 p-0 min-h-[300px]">
+                    
+                    <li class="mb-5">
+                        <div class="flex group items-center">
+                            <div class="bg-black group-hover:bg-white z-10 rounded-full border-4 border-white h-5 w-5">
+                                <div class="bg-white rounded-l-lg h-1 w-5 ml-4 mt-[0.55rem]"></div>
+                            </div>
+                            <div class="flex-1 ml-4 z-10 font-medium">
+                                <div class="order-1 space-y-2  border-solid border-white rounded-lg shadow transition ease-in-out lg:w-5/12 px-6 py-4">
+                                    <h3 class="mb-3 font-bold text-white text-2xl">FullStack Intern</h3>
+                                    <p class="pb-4 text-sm text-gray-100">Birla Vishvakarma Mahavidyalaya <i class="text-gray-500">Engineering College</i>  <br>(26th May to 7th June 2025)</p>
+                                    <hr/>
+                                    <p class="text-sm font-medium text-gray-300">Worked on Full Stack Development with MERN Stack.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- You can add more list items here -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</section>
+<section class="transition-color rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50  duration-300  flex flex-col  w-58 items-center justify-center  p-6 md:p-16 dark:bg-stone-900 dak:text-white  shadow-lg mb-10 fade-in-1s">
+    <h1 class="mt-0 pd-0">College Project</h1>
+    <p>
+        <b>Wireframe Tool</b><br>
+        The Wireframe Tool is a web-based application designed to assist UI/UX designers in
+                      creating wireframes efficiently.t is developed using the LAMP stack
+                      (Linux, Apache, MySQL, PHP) and  aims to streamline the design process.
+        <a href="doc/Project-Report-2CP08.pdf" target="_blank" rel="noopener noreferrer">Report</a>
+    </p>
+    <img src="images/Wireframe.GIF" class="h-auto w-full rounded-lg object-cover object-center shadow-xl shadow-blue-gray-900/50" alt="">
+
+</section>{% endblock %}
