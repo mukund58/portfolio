@@ -1,6 +1,6 @@
 +++
 title = "Why Free software is good ?"
-date = 2019-11-27
+date = 2025-06-20
 [extra]
   toc = true
 in_search_index = true
