@@ -4,7 +4,7 @@ date = 2025-06-20
 description = "web-based application for designer"
 [extra]
 toc = true
-image = "images/wireframePage.png"
+image = "/images/wireframePage.png"
 in_search_index = true
 +++
 
@@ -16,6 +16,34 @@ in_search_index = true
 - Mukund Parmar (23CP014)  
 - Jaivik Prajapati (23CP002)  
 
+
+## Snapshots
+
+### Home Page
+
+{{ responsive_img(path="images/project.png", alt="Sample image") }}
+
+### Login and Signup Page
+
+{{ responsive_img(path="images/project-login.png", alt="Sample image") }}
+{{ responsive_img(path="images/project-signup.png", alt="Sample image") }}
+
+
+### Dashboard Page
+
+- Send verification email
+- Edit or delete draft
+- Create new drafts
+
+{{ responsive_img(path="images/project-dashborad.png", alt="Sample image") }}
+{{ responsive_img(path="images/project-DashboardDraft.png", alt="Sample image") }}
+
+### Editor Page
+
+- Name and create drafts
+- View/search all drafts
+
+{{ responsive_img(path="images/project-editor.png", alt="Sample image") }}
 
 
 ## 1. Introduction
@@ -149,35 +177,6 @@ A wireframe is a simple sketch or blueprint that shows the basic layout of a web
 ## Relational Schema
 {{ responsive_img(path="images/RS.png", alt="Sample image") }}
 
-
-
-## Snapshots
-
-### Home Page
-
-{{ responsive_img(path="images/project.png", alt="Sample image") }}
-
-### Login and Signup Page
-
-{{ responsive_img(path="images/project-login.png", alt="Sample image") }}
-{{ responsive_img(path="images/project-signup.png", alt="Sample image") }}
-
-
-### Dashboard Page
-
-- Send verification email
-- Edit or delete draft
-- Create new drafts
-
-{{ responsive_img(path="images/project-dashborad.png", alt="Sample image") }}
-{{ responsive_img(path="images/project-DashboardDraft.png", alt="Sample image") }}
-
-### Editor Page
-
-- Name and create drafts
-- View/search all drafts
-
-{{ responsive_img(path="images/project-editor.png", alt="Sample image") }}
 
 ---
 
