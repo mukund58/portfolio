@@ -1,5 +1,5 @@
 {% if page.toc %}
-  <ul>
+  <!-- <ul>
     {% for h1 in page.toc %}
       <li class='list-none text-xl'><a href="{{ h1.permalink | safe }}" class="no-underline hover:underline dark:text-white text-black>{{ h1.title }}</a>
         {% if h1.children %}
@@ -11,5 +11,30 @@
         {% endif %}
       </li>
     {% endfor %}
-  </ul>
+  </ul> -->
+  
+  <h2>Table of contents</h2>
+<ul>
+{% for h1 in page.toc %}
+  <li class='list-none text-base'>
+  <a href="{{ h1.permalink | safe }}"  class="no-underline hover:underline dark:text-white text-black">{{ h1.title }}</a>
+  {% if h1.children %}
+    <ul>
+      {% for h2 in h1.children %}
+        <li>
+        <a href="{{ h2.permalink | safe }}">{{ h2.title }}</a>
+          <ul>
+          {% for h3 in h2.children %}
+            <li>
+            <a href="{{ h3.permalink | safe }}">{{ h3.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  </li>
+{% endfor %}
+</ul>
 {% endif %}

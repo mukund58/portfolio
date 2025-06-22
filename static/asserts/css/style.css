@@ -2,6 +2,15 @@ body {
     margin: 5;
     padding: 0;
 }
+pre
+{
+  width: 69%;
+  border: solid;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+
 .fade-in-1s{
     animation: fadeIn 1s ease-out forwards;
   }
