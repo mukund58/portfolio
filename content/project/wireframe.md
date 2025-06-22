@@ -2,20 +2,21 @@
 title = "Wireframe Tool"
 date = 2025-06-20
 description = "web-based application for designer"
+tags = "DevOps" 
 [extra]
 toc = true
 image = "/images/wireframePage.png"
 in_search_index = true
 +++
 
-# Wireframe Tool Project Report
+## Wireframe Tool Project Report
 
 **Institute:** Birla Vishvakarma Mahavidyalaya  
+[Project Repo](https://github.com/mukund58/Wireframe-tool)
 
 **Group Members:**  
 - Mukund Parmar (23CP014)  
 - Jaivik Prajapati (23CP002)  
-
 
 ## Snapshots
 
