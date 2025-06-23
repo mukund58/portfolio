@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-5xl m-auto mt-4">
+
+    <div class=""><a href=".."><-- </a><span class="accent-data">{{ page.slug }}</span></div>
+    <time datetime="{{ page.date }}">Published on: <span class="accent-data">{{ page.date }}</span></time>
+    {% if config.extra.author and config.extra.display_author == true %}
+    <address rel="author">By <span class="accent-data">{{config.extra.author}}</span></address>
+    {% endif %}
+  </div>
+<div class="wrapper max-w-5xl m-auto">
+<h1 class="title">
+  {{ page.title }}
+</h1>
+
+
+  {{ page.content | safe }}
+</div>
+{% endblock content %}
