@@ -4,6 +4,41 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+        <meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="robots" content="index, follow">
+        
+    <!-- Dynamic Title -->
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+    
+    <!-- Keywords -->
+    <meta name="keywords" content="{% block keywords %}Mukund Parmar, Web Developer, Full Stack Developer, MERN Stack, Portfolio{% endblock keywords %}">
+    
+    <!-- Author -->
+    <meta name="author" content="Mukund Parmar">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{% block canonical %}{{ current_url }}{% endblock canonical %}">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="{% block og_title %}{{ config.title }}{% endblock og_title %}">
+    <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{% block og_url %}{{ current_url }}{% endblock og_url %}">
+    <meta property="og:image" content="{% block og_image %}{{ get_url(path='images/og-image.jpg') }}{% endblock og_image %}">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{% block twitter_title %}{{ config.title }}{% endblock twitter_title %}">
+    <meta name="twitter:description" content="{% block twitter_description %}{{ config.description }}{% endblock twitter_description %}">
+    <meta name="twitter:image" content="{% block twitter_image %}{{ get_url(path='images/twitter-card.jpg') }}{% endblock twitter_image %}">
+    
+
         <link rel="icon" href="{{ get_url(path='images/logo.jpg') }}">
         <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
         <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>

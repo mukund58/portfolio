@@ -1,5 +1,7 @@
 # The URL the site will be built for
 base_url = "https://mukund.xyz"
+title = "Mukund Parmar - Full Stack Web Developer & Software Engineer"
+description = "Portfolio of Mukund Parmar, a passionate Full Stack Web Developer specializing in MERN Stack, DevOps, and Competitive Programming. View my projects and experience."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
@@ -23,7 +25,8 @@ smart_punctuation = true
 highlight_theme = "monokai"
 #highlight_theme = "gruvbox-dark"
 
+
 [extra]
-# Put all your custom variables here
-author = "mukund"
+author = "Mukund Parmar"
+keywords = ["Web Developer", "Full Stack Developer", "MERN Stack", "DevOps", "Portfolio", "Software Engineer"]
 display_author = true
