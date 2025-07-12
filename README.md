@@ -8,6 +8,7 @@ This repository contains my accepted solutions to problems from:
 I use this repository to track my progress, organize my practice, and share approaches to various problems.
 
 ## 📂 Directory Structure
+```
 .
 ├── Codeforces
 │   ├── 1791C-Prepend.cpp
@@ -23,5 +24,5 @@ I use this repository to track my progress, organize my practice, and share appr
 │   └── README.md
 ├── LICENSE
 └── README.md
-
+```
 
