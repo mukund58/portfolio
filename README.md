@@ -8,5 +8,20 @@ This repository contains my accepted solutions to problems from:
 I use this repository to track my progress, organize my practice, and share approaches to various problems.
 
 ## 📂 Directory Structure
+.
+├── Codeforces
+│   ├── 1791C-Prepend.cpp
+│   ├── 1805A-Need-Zero.cpp
+│   ├── 1814A-Coins.cpp
+│   ├── 1837A-Grasshopper.cpp
+│   └── README.md
+├── LeetCode
+│   ├── 0015-3sum.cpp
+│   ├── 0121-best-time-to-buy-and-sell-stock.cpp
+│   ├── 0206-Reverse-Linked-List.cpp
+│   ├── 0704-binary-search.cpp
+│   └── README.md
+├── LICENSE
+└── README.md
 
 
