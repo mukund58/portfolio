@@ -8,8 +8,8 @@ This repository contains my accepted solutions to problems from:
 I use this repository to track my progress, organize my practice, and share approaches to various problems.
 ## 🌐 My Profiles
 
-[![LeetCode](https://img.shields.io/badge/LeetCode-mukund57-orange)](https://leetcode.com/u/mukund57/)
-[![Codeforces](https://img.shields.io/badge/Codeforces-mukund58-blue)](https://codeforces.com/profile/mukund58)
+[![LeetCode](https://img.shields.io/badge/LeetCode-mukund58-orange)](https://leetcode.com/u/mukund58/)
+[![Codeforces](https://img.shields.io/badge/Codeforces-mukund57-blue)](https://codeforces.com/profile/mukund57)
 
 
 ## 📂 Directory Structure
