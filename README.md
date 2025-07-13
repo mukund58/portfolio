@@ -28,3 +28,8 @@ I use this repository to track my progress, organize my practice, and share appr
 └── README.md
 ```
 
+## My Profiles
+
+- [LeetCode (mukund57)](https://leetcode.com/mukund57)
+- [Codeforces (mukund58)](https://codeforces.com/profile/mukund58)
+
