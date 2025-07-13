@@ -11,6 +11,7 @@ I use this repository to track my progress, organize my practice, and share appr
 ```
 .
 ├── Codeforces
+│   ├── 1789A-serval-and-mochas-array.cpp
 │   ├── 1791C-Prepend.cpp
 │   ├── 1805A-Need-Zero.cpp
 │   ├── 1814A-Coins.cpp
@@ -18,6 +19,7 @@ I use this repository to track my progress, organize my practice, and share appr
 │   └── README.md
 ├── LeetCode
 │   ├── 0015-3sum.cpp
+│   ├── 0022-generate-parantheses.cpp
 │   ├── 0121-best-time-to-buy-and-sell-stock.cpp
 │   ├── 0206-Reverse-Linked-List.cpp
 │   ├── 0704-binary-search.cpp
