@@ -12,6 +12,7 @@ Each file is named as:
 | 2 | [0121 - Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | [0121-best-time-to-buy-and-sell-stock.cpp](0121-best-time-to-buy-and-sell-stock.cpp) |
 | 3 | [0015 - 3Sum](https://leetcode.com/problems/3sum/) | Medium | [0015-3sum.cpp](0015-3sum.cpp) |
 | 4 | [0206 - Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Easy | [0206-Reverse-Linked-List.cpp](0206-Reverse-Linked-List.cpp) |
+| 5 | [0022 - Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | [0022-Generate-Parentheses.cpp](0022-generate-parentheses.cpp) |
 ---
 
 ✅ **Languages Used:** C++ 
