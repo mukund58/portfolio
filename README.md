@@ -6,6 +6,10 @@ This repository contains my accepted solutions to problems from:
 - [LeetCode](https://leetcode.com/)
 
 I use this repository to track my progress, organize my practice, and share approaches to various problems.
+## 🌐 My Profiles
+
+- 🟢 [LeetCode Profile (mukund57)](https://leetcode.com/u/Mukund58/)
+- 🔵 [Codeforces Profile (mukund58)](https://codeforces.com/profile/mukund58)
 
 ## 📂 Directory Structure
 ```
