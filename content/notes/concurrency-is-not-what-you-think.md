@@ -1,11 +1,12 @@
 +++
-title = "Understanding Concurrency: How Single-CPU Systems Multitask"
-description = "Explore how computers run multiple programs at once, even with a single CPU, by understanding concurrency, scheduling, and preemptive multitasking."
+title = "How Single-CPU Systems Multitask"
+description = "Explore how computers run multiple programs at once, even with a single CPU, by understanding concurrency and scheduling"
 date = 2025-06-23
 [taxonomies]
 tags = ["Operating Systems", "Concurrency", "CPU", "Multitasking"]
 [extra]
 toc = true
+image = "/images/computer.jpg"
 in_search_index = true
 +++
 
