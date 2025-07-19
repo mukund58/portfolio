@@ -11,10 +11,13 @@
   <!-- {% for page in section.pages %}
   <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
   {% endfor %} -->
-  <section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 ">
+  <section class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
     {% for page in section.pages %}
-      <article class="bg-white border-solid dark:bg-[#1b1b1b]  dark:border-color-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-        <div class="p-6 ">
+      <article class="bg-white border-solid dark:bg-[#1b1b1b] dark:border-color-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+        {% if page.extra.image %}
+          <img src="{{ page.extra.image }}" alt="{{ page.title }}" class="w-full h-48 object-cover">
+        {% endif %}
+        <div class="p-6">
           <h2 class="text-2xl font-bold text-black dark:text-white">
             <a class="text-black dark:text-white" href="{{ page.permalink }}">{{ page.title }}</a>
           </h2>
@@ -26,6 +29,5 @@
       </article>
     {% endfor %}
   </section>
-  
 </ul>
 {% endblock content %}
