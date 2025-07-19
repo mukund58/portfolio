@@ -40,19 +40,20 @@
     <meta property="og:description" content="{% block og_description %}{{ config.description }}{% endblock og_description %}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{% block og_url %}{{ current_url }}{% endblock og_url %}">
-    <meta property="og:image" content="{% block og_image %}{{ get_url(path='images/og-image.jpg') }}{% endblock og_image %}">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{% block twitter_title %}{{ config.title }}{% endblock twitter_title %}">
-    <meta name="twitter:description" content="{% block twitter_description %}{{ config.description }}{% endblock twitter_description %}">
-    <meta name="twitter:image" content="{% block twitter_image %}{{ get_url(path='images/twitter-card.jpg') }}{% endblock twitter_image %}">
-    
-
         <link rel="icon" href="{{ get_url(path='images/logo.jpg') }}">
         <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
         <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+<meta property="og:url" content="https://www.mukund.xyz/" />
+<meta property="og:title" content="Mukund Parmar - Full Stack Web Developer Portfolio" />
+<meta property="og:description" content="Welcome to Mukund Parmar's portfolio. Full Stack Web Developer specializing in MERN Stack, DevOps, and Backend Development. View my projects and work experience." />
+<meta property="og:image" content="https://www.mukund.xyz/images/logo.jpg" />
 
+<!-- X (Twitter) -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://www.mukund.xyz/" />
+<meta property="twitter:title" content="Mukund Parmar - Full Stack Web Developer Portfolio" />
+<meta property="twitter:description" content="Welcome to Mukund Parmar's portfolio. Full Stack Web Developer specializing in MERN Stack, DevOps, and Backend Development. View my projects and work experience." />
+<meta property="twitter:image" content="https://www.mukund.xyz/images/logo.jpg" />
         <title>MyBlog</title>
         <link rel="stylesheet"  href="{{ get_url(path='asserts/css/style.css') }}">
         <!-- <link rel="stylesheet"  href="{{ get_url(path='asserts/css/output.css') }}"> -->
