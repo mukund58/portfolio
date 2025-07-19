@@ -46,11 +46,7 @@
 <meta property="og:url" content="https://www.mukund.xyz/" />
 <meta property="og:title" content="Mukund Parmar - Full Stack Web Developer Portfolio" />
 <meta property="og:description" content="Welcome to Mukund Parmar's portfolio. Full Stack Web Developer specializing in MERN Stack, DevOps, and Backend Development. View my projects and work experience." />
-{% if page.extra.image %}
-    <meta property="og:image" content="{{ page.extra.image }}" />
-    <meta property="twitter:image" content="{{ page.extra.image }}" />
-{% else %}
-    <meta property="og:image" content="{{ config.image | default(value='https://mukund.xyz/images/logo.jpg') }}"/>
+
     <meta property="twitter:image" content="{{ config.image | default(value='https://mukund.xyz/images/logo.jpg') }}"/>
 
 <!-- X (Twitter) -->
