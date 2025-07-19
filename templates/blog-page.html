@@ -3,13 +3,6 @@
 {% endblock title %}
 
 {% block content %}
-{% if page.extra.image %}
-    <meta property="og:image" content="{{ page.extra.image }}" />
-    <meta property="twitter:image" content="{{ page.extra.image }}" />
-{% else %}
-    <meta property="og:image" content="{{ config.image | default(value='https://mukund.xyz/images/logo.jpg') }}" />
-    <meta property="twitter:image" content="{{ config.image | default(value='https://mukund.xyz/images/logo.jpg') }}" />
-
 <div class="wrapper max-w-5xl m-auto">
 <h1 class="title">
   {{ page.title }}
