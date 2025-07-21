@@ -39,6 +39,68 @@ npm install
 npm run dev 
 ```
 
+Structure of a React App:
+```plaintext
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── public
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── Nav.jsx
+└── vite.config.jsx
+```
+## Day 2: JSX and Rendering Elements 
+### JSX (JavaScript XML)
+App.jsx
+```js
+import React from 'react'
+export default App
+function App() {
+
+  return (
+	  <h1>Hello, World!</h1>
+
+  )
+}
+```
+
+Nav.jsx
+```js
+import React from "react";
+export default Nav 
+function Nav(){
+	return(
+		<h1>Nav Bar</h1>
+	)
+}
+```
+
+main.jsx
+```js 
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
+import Nav from './Nav.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+    <Nav />
+  </StrictMode>,
+)
+```
+### Key Points
+Component should  start with an uppercase letter, and the file name should match the component name. This is a convention in React to differentiate components from regular HTML elements.
+
+ We can name both App.js & App.jsx but in vite development environment we have to use jsx
+
+We can return only one component by a jsx function so it's good to wrap in <></> or <div></div>
+
 
 
 
