@@ -101,10 +101,78 @@ Component should  start with an uppercase letter, and the file name should match
 
 We can return only one component by a jsx function so it's good to wrap in <></> or <div></div>
 
+## Day 3: Create own Custom components
+### Creating Custom components
+script.js 
+```js 
+let rootElement = document.getElementById('root');
+
+const reactElement = {
+	type: 'a',
+	props: {
+		href: 'https://mukund.xyz',
+		_target: '_blank',
+	},
+	children: 'Visit mukund.xyz',
+};
+
+
+CreateReactElement(reactElement, rootElement);
+
+
+function CreateReactElement(element, container) {
+	const domElement = document.createElement(element.type);
+	domElement.textContent = element.children;
+        for (const prop in element.props) {
+			if (prop === 'children') continue;
+		domElement.setAttribute(prop, element.props[prop]);
+	}
+container.appendChild(domElement);
+}
+```
+
+index.html
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+	
+		<div id="root">
+			
+		</div>
+	</body>
+		<script src="script.js"></script>
+</html>
+```
+
+Create a custom component in React that renders an anchor tag with a link to your website.
+
+main.jsx
+```js 
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+const reactElement = React.createElement(
+  'a',
+  {
+    href: 'https://mukund.xyz',
+    target: '_blank',
+  },
+  'Visit mukund.xyz'
+)
 
 
 
-
+createRoot(document.getElementById('root'))
+.render(
+reactElement
+)
+```
 
 
 
