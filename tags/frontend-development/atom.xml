@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Mukund Parmar - Full Stack Web Developer &amp; Software Engineer - Frontend Development</title>
+    <subtitle>Portfolio of Mukund Parmar, a passionate Full Stack Web Developer specializing in MERN Stack, DevOps, and Competitive Programming. View my projects and experience.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://mukund.xyz/tags/frontend-development/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://mukund.xyz"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-07-19T00:00:00+00:00</updated>
+    <id>https://mukund.xyz/tags/frontend-development/atom.xml</id>
+    <entry xml:lang="en">
+        <title>90 Days of Learning React</title>
+        <published>2025-07-19T00:00:00+00:00</published>
+        <updated>2025-07-19T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://mukund.xyz/notes/90-days-of-learing-react/"/>
+        <id>https://mukund.xyz/notes/90-days-of-learing-react/</id>
+        
+        <content type="html" xml:base="https://mukund.xyz/notes/90-days-of-learing-react/">&lt;p&gt;This blog is where I will document my journey of learning React over the next 90 days. Each day, I will focus on a specific topic or concept, and share my notes, code snippets, and resources.&lt;&#x2F;p&gt;
+&lt;a href=&quot;&amp;#x2F;images&amp;#x2F;react-logo.png&quot; data-lightbox=&quot;blog-img&quot; data-title=&quot;React Logo&quot;&gt;
+  &lt;img src=&quot;&amp;#x2F;images&amp;#x2F;react-logo.png&quot;
+       alt=&quot;React Logo&quot;
+       loading=&quot;lazy&quot;
+       style=&quot;max-width: 100%; height: auto; border-radius: 6px;&quot; &#x2F;&gt;
+&lt;&#x2F;a&gt;
+&lt;h2 id=&quot;day-1-introduction-to-react&quot;&gt;Day 1: Introduction to React&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;What is React?&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;A JavaScript library for building user interfaces.&lt;&#x2F;li&gt;
+&lt;li&gt;Developed by Facebook and released in 2013.&lt;&#x2F;li&gt;
+&lt;li&gt;Focuses on building reusable UI components.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Key Features:&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Virtual DOM for efficient rendering.&lt;&#x2F;li&gt;
+&lt;li&gt;Component-based architecture.&lt;&#x2F;li&gt;
+&lt;li&gt;Single Page Application (SPA) capabilities.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h4 id=&quot;setup-and-installation&quot;&gt;Setup and Installation&lt;&#x2F;h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Install Node.js and npm.&lt;&#x2F;li&gt;
+&lt;li&gt;Create a new React app using Create React App:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;npx create-react-app my-app
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; my-app
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;npm start
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Alternatively, you can set up a React project using Vite for faster development:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;npm create vite@latest my-app --template React
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;cd&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt; my-app
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;npm install 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;npm run dev 
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Structure of a React App:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;plaintext&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-plaintext &quot;&gt;&lt;code class=&quot;language-plaintext&quot; data-lang=&quot;plaintext&quot;&gt;&lt;span&gt;├── eslint.config.js
+&lt;&#x2F;span&gt;&lt;span&gt;├── index.html
+&lt;&#x2F;span&gt;&lt;span&gt;├── package.json
+&lt;&#x2F;span&gt;&lt;span&gt;├── package-lock.json
+&lt;&#x2F;span&gt;&lt;span&gt;├── public
+&lt;&#x2F;span&gt;&lt;span&gt;│   └── vite.svg
+&lt;&#x2F;span&gt;&lt;span&gt;├── README.md
+&lt;&#x2F;span&gt;&lt;span&gt;├── src
+&lt;&#x2F;span&gt;&lt;span&gt;│   ├── App.jsx
+&lt;&#x2F;span&gt;&lt;span&gt;│   ├── main.jsx
+&lt;&#x2F;span&gt;&lt;span&gt;│   └── Nav.jsx
+&lt;&#x2F;span&gt;&lt;span&gt;└── vite.config.jsx
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;day-2-jsx-and-rendering-elements&quot;&gt;Day 2: JSX and Rendering Elements&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;jsx-javascript-xml&quot;&gt;JSX (JavaScript XML)&lt;&#x2F;h3&gt;
+&lt;p&gt;App.jsx&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;React &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;react&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;App
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;	  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;Hello&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;World&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;!&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Nav.jsx&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;React &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;react&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;Nav 
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;Nav&lt;&#x2F;span&gt;&lt;span&gt;(){
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;return&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;		&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;Nav Bar&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	)
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;main.jsx&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;StrictMode &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;react&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;createRoot &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;react-dom&#x2F;client&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;App &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;.&#x2F;App.jsx&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;Nav &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;.&#x2F;Nav.jsx&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;createRoot&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;getElementById&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;root&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;))&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;render&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;  &amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;StrictMode&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;App &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;Nav &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;StrictMode&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;key-points&quot;&gt;Key Points&lt;&#x2F;h3&gt;
+&lt;p&gt;Component should  start with an uppercase letter, and the file name should match the component name. This is a convention in React to differentiate components from regular HTML elements.&lt;&#x2F;p&gt;
+&lt;p&gt;We can name both App.js &amp;amp; App.jsx but in vite development environment we have to use jsx&lt;&#x2F;p&gt;
+&lt;p&gt;We can return only one component by a jsx function so it’s good to wrap in &amp;lt;&amp;gt;&amp;lt;&#x2F;&amp;gt; or &lt;div&gt;&lt;&#x2F;div&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;day-3-create-own-custom-components&quot;&gt;Day 3: Create own Custom components&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;creating-custom-components&quot;&gt;Creating Custom components&lt;&#x2F;h3&gt;
+&lt;p&gt;script.js&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;let &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;rootElement &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;getElementById&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;root&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;reactElement &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	type: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;a&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;	props: {
+&lt;&#x2F;span&gt;&lt;span&gt;		href: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;mukund.xyz&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;		_target: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;_blank&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;	},
+&lt;&#x2F;span&gt;&lt;span&gt;	children: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;Visit mukund.xyz&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;};
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;CreateReactElement&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;reactElement&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;rootElement&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;CreateReactElement&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;element&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;container&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;domElement &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;createElement&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;element&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;type&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;domElement&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;textContent &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;element&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;children&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;for &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;prop &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;in &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;element&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;props&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;			&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;prop &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;children&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;continue&lt;&#x2F;span&gt;&lt;span&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;domElement.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;setAttribute&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;prop&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;element&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;props&lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;prop&lt;&#x2F;span&gt;&lt;span&gt;]);
+&lt;&#x2F;span&gt;&lt;span&gt;	}
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;container.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;appendChild&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;domElement&lt;&#x2F;span&gt;&lt;span&gt;);
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;index.html&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;html&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-html &quot;&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;!&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;DOCTYPE &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;html &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;lang=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;en&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;charset=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;UTF-8&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;meta &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;name=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;viewport&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;content=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;width=device-width, initial-scale=1&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;title&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;link &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;href=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;css&#x2F;style.css&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;rel=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;stylesheet&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;head&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;div &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;id&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;root&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;			
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;div&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;body&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;		&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;script &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;src=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;script.js&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;script&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;font-weight:bold;color:#8ec07c;&quot;&gt;html&lt;&#x2F;span&gt;&lt;span style=&quot;color:#83a598;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;Create a custom component in React that renders an anchor tag with a link to your website.&lt;&#x2F;p&gt;
+&lt;p&gt;main.jsx&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;React &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;react&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;createRoot &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;react-dom&#x2F;client&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;reactElement &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;React.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;createElement&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;a&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  {
+&lt;&#x2F;span&gt;&lt;span&gt;    href: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;https:&#x2F;&#x2F;mukund.xyz&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;    target: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;_blank&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;,
+&lt;&#x2F;span&gt;&lt;span&gt;  },
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;Visit mukund.xyz&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;createRoot&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;document&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fabd2f;&quot;&gt;getElementById&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;root&amp;#39;&lt;&#x2F;span&gt;&lt;span&gt;))
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;render&lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;reactElement
+&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;days-4-hooks-and-state-management&quot;&gt;Days 4 Hooks and State Management&lt;&#x2F;h2&gt;
+&lt;p&gt;Hooks are functions that let you use state and other React features in functional components. They allow you to manage state, lifecycle events, and side effects without writing class components.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;useState Hook&lt;&#x2F;strong&gt;
+&lt;ul&gt;
+&lt;li&gt;Allows you to add state to functional components.&lt;&#x2F;li&gt;
+&lt;li&gt;Returns an array with the current state and a function to update it.&lt;&#x2F;li&gt;
+&lt;li&gt;Hooks can’t be called inside loops, conditions, or nested functions. They should be called at the top level of your component.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;js&quot; style=&quot;background-color:#282828;color:#fdf4c1aa;&quot; class=&quot;language-js &quot;&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;useState &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;react&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;reactLogo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;.&#x2F;assets&#x2F;react.svg&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;viteLogo &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;from &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;&#x2F;vite.svg&amp;#39;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;import &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;#39;.&#x2F;App.css&amp;#39;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;App&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;const &lt;&#x2F;span&gt;&lt;span&gt;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;] &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;useState&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;counter&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;function &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;counterDecrease&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;	    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;) {
+&lt;&#x2F;span&gt;&lt;span&gt;      &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;return
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;setCount&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d3869b;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span&gt;  }
+&lt;&#x2F;span&gt;&lt;span&gt;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	  
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;button className&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;counter&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;Click To Increase count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;button&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	  	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;button className&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded&amp;quot; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;onClick&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;counterDecrease&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;Click To Decrease count &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;}&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#8ec07c;&quot;&gt;button&lt;&#x2F;span&gt;&lt;span&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;	  
+&lt;&#x2F;span&gt;&lt;span&gt;	  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;h1 className&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b8bb26;&quot;&gt;&amp;quot;text-3xl font-bold underline&amp;quot;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;span&gt;{&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;count&lt;&#x2F;span&gt;&lt;span&gt;}&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&#x2F;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;h1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fe8019;&quot;&gt;&amp;lt;&#x2F;&amp;gt;
+&lt;&#x2F;span&gt;&lt;span&gt;  )
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#fa5c4b;&quot;&gt;export default &lt;&#x2F;span&gt;&lt;span style=&quot;color:#fdf4c1;&quot;&gt;App
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;hr &#x2F;&gt;
+</content>
+        
+    </entry>
+</feed>
