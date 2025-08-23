@@ -2,6 +2,11 @@ body {
     margin: 5;
     padding: 0;
 }
+code {
+    font-family: monospace;
+    font-size: 1.2em;
+    font-weight: bold;
+}
 pre
 {
  

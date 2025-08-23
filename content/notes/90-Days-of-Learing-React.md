@@ -185,8 +185,6 @@ Hooks are functions that let you use state and other React features in functiona
 
 ```js 
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
@@ -215,10 +213,72 @@ function counterDecrease() {
 export default App
 ```
 
+#Day 5: Virtual DOM and Reconciliation
+
+React Fiber Architecture is an ongoing reimplementation of React's core algorithm. It is the culmination of over two years of research by the React team.
+
+### Virtual dom 
+Virtual DOM (VDOM) is a programming concept where a virtual representation of the UI is kept in memory and synced with the real DOM by a library such as ReactDOM. This process is called reconciliation.
+
+### What is reconciliation?
+    The algorithm React uses to diff(differentiate) one tree with another to determine which parts need to be changed.
+
+**reconciliation** is the process through which React updates the DOM. When a component's state or props change, React creates a new Virtual DOM tree and compares it with the previous one. It then calculates the most efficient way to update the real DOM to match the new Virtual DOM.
 
 
+### Key Terms
 
+Other key features include the 
 
+**ability to pause**, 
+**abort**, or **reuse work as new updates come in**
+**the ability to assign priority to different types of updates**
+and new concurrency primitives.
 
+The algorithm React uses to diff one tree with another to determine which parts need to be changed.
 
+{{ image_url(url="https://media.geeksforgeeks.org/wp-content/uploads/20241212235246933476/Browser-DOM-Virtual-DOM.webp", alt="Online Image Example") }}
+
+**Reconciliation is the algorithm behind what is popularly understood as the "virtual DOM."**
+
+A high-level description goes something like this: when you render a React application, a tree of nodes that describes the app is generated and saved in memory. This tree is then flushed to the rendering environment — for example, in the case of a browser application, it's translated to a set of DOM operations. When the app is updated (usually via setState), a new tree is generated. The new tree is diffed with the previous tree to compute which operations are needed to update the rendered app.
+
+- Although Fiber is a ground-up rewrite of the reconciler, the high-level algorithm described in the React docs will be largely the same. 
+
+The key points are:
+
+   
+- Different component types are assumed to generate substantially different trees. React will not attempt to diff them, but rather replace the old tree completely.
+  
+- Diffing of lists is performed using keys. Keys should be "stable, predictable, and unique."
+
+### In Array Why keys should be introduced?
+- **In Fiber algorithm if we want to impove performance of list when itrating over array of items  we should use keys.**
+
+When React sees a list of elements, it needs to determine which items have changed, been added, or been removed. Keys help React identify which items in the list correspond to which elements in the previous render.
+
+Scheduling
+   - the process of determining when work should be performed.
+
+The key points are:
+
+- In a UI, it's not necessary for every update to be applied immediately; in fact, doing so can be wasteful, causing frames to drop and degrading the user experience.
+- Different types of updates have different priorities — an animation update needs to complete more quickly than, say, an update from a data store.
+- A push-based approach requires the app (you, the programmer) to decide how to schedule work. A pull-based approach allows the framework (React) to be smart and make those decisions for you.
+
+### What is a fiber?
+We've established that a primary goal of Fiber is to enable React to take advantage of scheduling. Specifically, we need to be able to
+
+- pause work and come back to it later.
+- assign priority to different types of work.
+- reuse previously completed work.
+- abort work if it's no longer needed.
+### Structure of a Fiber
+In concrete terms, a fiber is a JavaScript object that contains information about a component, its input, and its output.
+
+A fiber corresponds to a stack frame, but it also corresponds to an instance of a component.
+
+Here are some of the important fields that belong to a fiber. (This list is not exhaustive.)
+`type` and `key`
+ 
 ---
