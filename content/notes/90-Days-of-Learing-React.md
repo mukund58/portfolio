@@ -13,6 +13,7 @@ image = "/images/react-logo.png"
 This blog is where I will document my journey of learning React over the next 90 days. Each day, I will focus on a specific topic or concept, and share my notes, code snippets, and resources.
 
 {{image_url(url="/images/react-logo.png", alt="React Logo")}}
+
 ## Day 1: Introduction to React
 - **What is React?**
   - A JavaScript library for building user interfaces.
@@ -57,7 +58,7 @@ Structure of a React App:
 ## Day 2: JSX and Rendering Elements 
 ### JSX (JavaScript XML)
 App.jsx
-```js
+```js 
 import React from 'react'
 export default App
 function App() {
@@ -280,5 +281,108 @@ A fiber corresponds to a stack frame, but it also corresponds to an instance of 
 
 Here are some of the important fields that belong to a fiber. (This list is not exhaustive.)
 `type` and `key`
- 
----
+
+### Day 6: Props for  Component Communication  
+Props (short for "properties") are a way to pass data from a parent component to a child component in React. They are read-only and cannot be modified by the child component.
+
+#### Function and Class Components
+
+The simplest way to define a component is to write a JavaScript function:
+
+```js 
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and returns a React element. `We call such components “function components” because they are literally JavaScript functions.`
+
+You can also use an `ES6` class to define a component:
+```js 
+class Welcome extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+The above two components are equivalent from React’s point of view.
+
+How to create Parents and Child components using props 
+
+`ParentCard.jsx`
+
+```js 
+import Card from "./Card";
+
+function ParentCard() {
+  const products = [
+    {
+      name: "Apple Watch",
+      price: "$899",
+      stock: "In Stock",
+      img: "https://files.refurbed.com/ii/apple-watch-series-7-titan-45mm-1705929512.jpg"
+    },
+    {
+      name: "Samsung Galaxy Watch",
+      price: "$699",
+      stock: "Only 3 Left",
+      img: "https://m.media-amazon.com/images/I/71Swqqe7XAL._AC_UL600_FMwebp_QL65_.jpg"
+    },
+    {
+      name: "Noise Smartwatch",
+      price: "$199",
+      stock: "Out of Stock",
+      img: "https://sell.gameloot.in/wp-content/uploads/sites/4/2022/05/Samsung-Galaxy-Watch-4-Classic-LTE-42mm.jpg"
+    }
+  ];
+
+  return (
+    <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-5">
+      {products.map((product, index) => (
+        <Card key={index} productData={product} />
+      ))}
+    </div>
+  );
+}
+
+export default ParentCard;
+```
+
+`Card.jsx`
+
+```js 
+function Card(props) {
+  const obj = props.productData;
+
+const { name= "default Watch ", price= "$899", stock= "Out of Stock", img="https://files.refurbed.com/ii/apple-watch-series-7-titan-45mm-1705929512.jpg" } = obj;
+
+    return (
+        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <img className="w-full h-64 object-cover" src={img} alt={name} />
+        <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">{name}</div>
+            <p className="text-gray-700 text-base">Price: {price}</p>
+            <p className={`text-base ${stock === "In Stock" ? "text-green-500" : stock === "Only 3 Left" ? "text-yellow-500" : "text-red-500"}`}>
+            {stock}
+            </p>
+        </div>
+        <div className="px-6 pt-4 pb-2">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            Buy Now
+            </button>
+        </div>
+        </div>
+    );
+    }
+
+```
+
+
+
+
+
+
+
+
+
