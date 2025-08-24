@@ -214,7 +214,7 @@ function counterDecrease() {
 export default App
 ```
 
-#Day 5: Virtual DOM and Reconciliation
+## Day 5: Virtual DOM and Reconciliation
 
 React Fiber Architecture is an ongoing reimplementation of React's core algorithm. It is the culmination of over two years of research by the React team.
 
@@ -282,7 +282,7 @@ A fiber corresponds to a stack frame, but it also corresponds to an instance of 
 Here are some of the important fields that belong to a fiber. (This list is not exhaustive.)
 `type` and `key`
 
-### Day 6: Props for  Component Communication  
+## Day 6: Props for  Component Communication  
 Props (short for "properties") are a way to pass data from a parent component to a child component in React. They are read-only and cannot be modified by the child component.
 
 #### Function and Class Components
