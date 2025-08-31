@@ -377,7 +377,103 @@ const { name= "default Watch ", price= "$899", stock= "Out of Stock", img="https
     }
 
 ```
+## Day 7: useState Hook in Depth
+The `useState` hook is a fundamental building block in React that allows you to add state to functional components. It provides a way to manage and update state within your components without the need for class components.
+### Syntax
+```js 
+const [state, setState] = useState(initialState);
+```
+- `state`: The current state value.
+- `setState`: A function that allows you to update the state.
+- `initialState`: The initial value of the state.
 
+### Example of useState Hook for Background Color Change on Button Click 
+```js 
+import { useState } from 'react'
+
+function App() {
+  const [colorbg, setColor] = useState("Black");
+
+  return (
+    <>
+	  <div className="App" style={{ backgroundColor: colorbg, transition: 'background-color 0.5s ease', height: '100vh' }}>
+	<h1 className="text-3xl font-bold text-center min-h-screen">
+	  Background Color Change on Click
+	</h1>
+	  
+	  <div className="flex flex-row items-top justify-center p-10 gap-5 absolute top-10 w-full bg-white/10 ">
+	  	<button className="bg-green hover:bg-green-700 text-white  font-bold py-2 px-4 rounded border" onClick={()=> {setColor("Green")}} >Green</button>
+	  	<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"onClick={() => setColor("Blue")}>Blue</button>
+	  	<button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"onClick={() => setColor("Red")}>Red</button>
+	  	<button className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded"onClick={() => setColor("Yellow")}>Yellow</button>
+	  	<button className="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"onClick={() => setColor("Purple")}>Purple</button>
+	  	<button className="bg-pink-500 hover:bg-pink-700 text-white font-bold py-2 px-4 rounded"onClick={() => setColor("Pink")}>Pink</button>
+	  	<button className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"onClick={() => setColor("Gray")}>Gray</button>
+	  	<button className="bg-black hover:bg-black text-white font-bold py-2 px-4 rounded"onClick={() => setColor("Black")}>Black</button>
+	  	<button className="bg-white hover:bg-white text-black font-bold py-2 px-4 rounded border"onClick={() => setColor("White")}>White</button>
+
+	  	</div>
+	  </div>
+    </>
+  )
+}
+
+export default App
+```
+### Explanation
+- We import the `useState` hook from React.
+- We define a functional component `App`.
+- We use the `useState` hook to create a state variable `colorbg` with an initial value of "Black".
+- We create buttons that, when clicked, update the `colorbg` state to different colors.
+- The background color of the `div` changes based on the current value of `colorbg`.
+### Key points
+- The `useState` hook can be called multiple times in a single component to manage different pieces of state.
+- State updates are asynchronous, so the new state value may not be immediately available after calling the `setState` function.
+- You can pass a function to the `setState` function if you need to update the state based on the previous state.
+### Example of updating state based on previous state
+```js
+setCount(prevCount => prevCount + 1);
+```
+This ensures that you are working with the most up-to-date state value, especially when multiple state updates are queued.
+### Conclusion
+The `useState` hook is a powerful and essential tool for managing state in React functional Components. It allows you to create dynamic and interactive user interfaces by enabling stateful behavior in your components.
+
+## Day 8: useEffect, useRef and useCallback Hooks 
+
+### useEffect Hook
+The `useEffect` hook allows you to perform side effects in your functional components. Side effects can include data fetching, subscriptions, or manually changing the DOM. The `useEffect` hook runs after the component renders.
+
+### Syntax
+```js 
+useEffect(() => {
+  // Side effect code here
+}, [dependencies]);
+```
+- The first argument is a function that contains the side effect code.
+- The second argument is an optional array of dependencies. The effect will only re-run if one of the dependencies has changed.
+
+### useRef Hook 
+The `useRef` hook allows you to create a mutable reference that persists across renders. It can be used to access DOM elements directly or to store any mutable value that does not cause a re-render when updated.
+### Syntax
+```js 
+const ref = useRef(initialValue);
+```
+- `ref`: The mutable reference object.
+- `initialValue`: The initial value of the reference.
+
+### useCallback Hook 
+The `useCallback` hook returns a memoized version of a callback function that only changes if one of the dependencies has changed. It is useful for optimizing performance by preventing unnecessary re-creations of functions.
+### Syntax 
+```js 
+const memoizedCallback = useCallback(() => {
+  // Callback code here
+}, [dependencies]);
+```
+- The first argument is the callback function. 
+- The second argument is an array of dependencies. The callback will only be re-created if one of the dependencies has changed.
+
+### Example using useEffect, useRef, and useCallback
+```js 
 
 
 
