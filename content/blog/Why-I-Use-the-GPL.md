@@ -5,6 +5,7 @@ description = "An explanation of why I choose to use the GNU General Public Lice
 tags = ["GPL", "Open Source", "Software Licensing"]
 categories = ["Software", "Licensing"]
 [extra]
+image = "https://preview.redd.it/oyfim7x9h6va1.png?auto=webp&s=60579dee07d78dcaee88bf2881b2c86a956bef69"
   toc = true
 in_search_index = true
 +++

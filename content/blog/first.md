@@ -6,6 +6,7 @@ tags = ["Free Software", "Proprietary Software", "Software Freedom"]
 categories = ["Software", "Licensing"]
 
 [extra]
+image="images/gnu-means-freedom.png"
   toc = true
 in_search_index = true
 +++
