@@ -474,8 +474,30 @@ const memoizedCallback = useCallback(() => {
 
 ### Example using useEffect, useRef, and useCallback
 ```js 
+import { useState, useEffect, useRef, useCallback } from 'react';
+import './App.css'
+function App() {
+  const [count, setCount] = useState(0);
+  const countRef = useRef(count);
 
+  useEffect(() => {
+    countRef.current = count;
+  }, [count]);
 
+  const increment = useCallback(() => {
+    setCount(prevCount => prevCount + 1);
+  }, []);
+
+  return (
+    <>
+      <div className="App">
+    <h1 className="text-3xl font-bold underline">useEffect, useRef and useCallback Hooks</h1>
+      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={increment}>Increment Count: {count}</button>
+      <h1 className="text-3xl font-bold underline">{count}</h1>
+      </div>
+    </>
+  )
+}
 
 
 
