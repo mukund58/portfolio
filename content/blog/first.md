@@ -4,7 +4,7 @@ date = 2025-06-20
 description = "An explanation of why I choose to use the Free Software for my software projects."
 tags = ["Free Software", "Proprietary Software", "Software Freedom"]
 categories = ["Software", "Licensing"]
-
+paginate = true
 [extra]
 image="/images/gnu-means-freedom.png"
   toc = true
