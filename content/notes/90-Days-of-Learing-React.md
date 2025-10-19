@@ -182,37 +182,6 @@ Hooks are functions that let you use state and other React features in functiona
   - Allows you to add state to functional components.
   - Returns an array with the current state and a function to update it.
   - Hooks can't be called inside loops, conditions, or nested functions. They should be called at the top level of your component.
-  
-
-```js 
-import { useState } from 'react'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-function counter() {
-    setCount(count + 1)
-  }
-function counterDecrease() {
-	    if (count <= 0) {
-      return
-    }
-    setCount(count - 1)
-  }
-  return (
-    <>
-	  
-	<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={counter}>Click To Increase count : {count}</button>
-	  	<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={counterDecrease}>Click To Decrease count : {count}</button>
-	  
-	  <h1 className="text-3xl font-bold underline">{count}</h1>
-
-    </>
-  )
-}
-
-export default App
-```
 
 ## Day 5: Virtual DOM and Reconciliation
 
@@ -379,10 +348,41 @@ const { name= "default Watch ", price= "$899", stock= "Out of Stock", img="https
 ```
 ## Day 7: useState Hook in Depth
 The `useState` hook is a fundamental building block in React that allows you to add state to functional components. It provides a way to manage and update state within your components without the need for class components.
-### Syntax
+
+1. Understanding State
+
+Definition: State is data in an application that changes over time . In React, this means data that can be different from one component render to another .
+
+
+Importance: Tracking state is crucial for application functionality, such as showing a loading spinner while fetching data, displaying error messages, or handling the data itself .
+
+2. The useState Hook
+
+Purpose: useState is the primary hook used in functional components to manage and manipulate state in React .
+
+How to Import: You must import the hook from React: import { useState } from 'react' .
+
+3. useState Syntax and Structure
+
+The hook is used by destructuring an array that contains two elements:
+
+- State Variable (count): The current value of the state .
+
+- Updater Function (setCount): A function used to update the state variable .
+
+Naming Convention: By convention, the updater function is named set followed by the name of the state variable (e.g., setCount) .
+
+Default Value: The value passed as an argument to useState() is the initial or default value of the state. If no value is provided, the state will be undefined .
+
+JavaScript
 ```js 
-const [state, setState] = useState(initialState);
+// Example: Initializing count with a default value of 0
+const [count, setCount] = useState(0);
 ```
+
+
+
+
 - `state`: The current state value.
 - `setState`: A function that allows you to update the state.
 - `initialState`: The initial value of the state.
@@ -441,17 +441,32 @@ The `useState` hook is a powerful and essential tool for managing state in React
 ## Day 8: useEffect, useRef and useCallback Hooks 
 
 ### useEffect Hook
+What is `useEffect` ?
+It is a hook from react to perform side effects in out application.
+side effects you can think of about them as name implies  as things happening as consequence of something else happening in your application like fetching data from an API, setting up a subscription, or manually changing the DOM in React components.
+
+how to use it ?
+
+when to use it ? 
+how it works ?
+
 The `useEffect` hook allows you to perform side effects in your functional components. Side effects can include data fetching, subscriptions, or manually changing the DOM. The `useEffect` hook runs after the component renders.
 
 ### Syntax
 ```js 
+useEffect(() => {}, [dependencies]);
+
 useEffect(() => {
-  // Side effect code here
+// Side effect code here 
+// optional return  function for cleanup
 }, [dependencies]);
+
 ```
+
 - The first argument is a function that contains the side effect code.
 - The second argument is an optional array of dependencies. The effect will only re-run if one of the dependencies has changed.
 
+- it is guaranteed that the useEffect function will run at least once when our component mounts.And no matter what you pass as dependencies.
 ### useRef Hook 
 The `useRef` hook allows you to create a mutable reference that persists across renders. It can be used to access DOM elements directly or to store any mutable value that does not cause a re-render when updated.
 ### Syntax
