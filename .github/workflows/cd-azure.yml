@@ -1,0 +1,199 @@
+name: CD – Deploy to Azure App Service
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+# Prevent concurrent deployments to the same environment
+concurrency:
+  group: azure-cd-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Azure Container Registry hostname, e.g. myregistry.azurecr.io
+  ACR_REGISTRY: ${{ secrets.ACR_REGISTRY }}
+
+  # Short registry name used for `az acr login`, e.g. myregistry
+  ACR_NAME: ${{ secrets.ACR_NAME }}
+
+  BACKEND_IMAGE: taskflow-backend
+  FRONTEND_IMAGE: taskflow-frontend
+
+jobs:
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Build & push backend image
+  # ─────────────────────────────────────────────────────────────────────────────
+  build-backend:
+    name: Build & Push Backend
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write   # required for OIDC token
+      contents: read
+
+    outputs:
+      image-tag: ${{ steps.meta.outputs.version }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Log in to ACR
+        run: az acr login --name ${{ env.ACR_NAME }}
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.ACR_REGISTRY }}/${{ env.BACKEND_IMAGE }}
+          tags: |
+            type=sha,prefix=,format=short
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push backend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./Backend
+          file: ./Backend/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Build & push frontend image
+  # ─────────────────────────────────────────────────────────────────────────────
+  build-frontend:
+    name: Build & Push Frontend
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    outputs:
+      image-tag: ${{ steps.meta.outputs.version }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Log in to ACR
+        run: az acr login --name ${{ env.ACR_NAME }}
+
+      - name: Extract Docker metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.ACR_REGISTRY }}/${{ env.FRONTEND_IMAGE }}
+          tags: |
+            type=sha,prefix=,format=short
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push frontend image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./frontend
+          file: ./frontend/Dockerfile
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Deploy backend Web App for Containers
+  # ─────────────────────────────────────────────────────────────────────────────
+  deploy-backend:
+    name: Deploy Backend to Azure
+    runs-on: ubuntu-latest
+    needs: build-backend
+    permissions:
+      id-token: write
+      contents: read
+
+    environment:
+      name: production
+      url: https://${{ secrets.AZURE_BACKEND_WEBAPP_NAME }}.azurewebsites.net
+
+    steps:
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Configure backend App Settings
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: ${{ secrets.AZURE_BACKEND_WEBAPP_NAME }}
+          app-settings-json: |
+            [
+              { "name": "WEBSITES_PORT",          "value": "8080",                              "slotSetting": false },
+              { "name": "CONNECTION_STRING",       "value": "${{ secrets.CONNECTION_STRING }}",  "slotSetting": false },
+              { "name": "REDIS_CONNECTION_STRING", "value": "${{ secrets.REDIS_CONNECTION_STRING }}", "slotSetting": false },
+              { "name": "JwtSettings__Secret",     "value": "${{ secrets.JWT_SECRET }}",         "slotSetting": false },
+              { "name": "JwtSettings__Issuer",     "value": "${{ secrets.JWT_ISSUER }}",         "slotSetting": false },
+              { "name": "JwtSettings__Audience",   "value": "${{ secrets.JWT_AUDIENCE }}",       "slotSetting": false }
+            ]
+
+      - name: Deploy backend image to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_BACKEND_WEBAPP_NAME }}
+          images: ${{ env.ACR_REGISTRY }}/${{ env.BACKEND_IMAGE }}:${{ needs.build-backend.outputs.image-tag }}
+
+  # ─────────────────────────────────────────────────────────────────────────────
+  # Deploy frontend Web App for Containers
+  # ─────────────────────────────────────────────────────────────────────────────
+  deploy-frontend:
+    name: Deploy Frontend to Azure
+    runs-on: ubuntu-latest
+    needs: build-frontend
+    permissions:
+      id-token: write
+      contents: read
+
+    environment:
+      name: production
+      url: https://${{ secrets.AZURE_FRONTEND_WEBAPP_NAME }}.azurewebsites.net
+
+    steps:
+      - name: Azure login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Configure frontend App Settings
+        uses: azure/appservice-settings@v1
+        with:
+          app-name: ${{ secrets.AZURE_FRONTEND_WEBAPP_NAME }}
+          app-settings-json: |
+            [
+              { "name": "WEBSITES_PORT",       "value": "3000",                                    "slotSetting": false },
+              { "name": "PORT",                "value": "3000",                                    "slotSetting": false },
+              { "name": "NEXT_PUBLIC_API_URL", "value": "${{ secrets.NEXT_PUBLIC_API_URL }}",      "slotSetting": false }
+            ]
+
+      - name: Deploy frontend image to Azure Web App
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: ${{ secrets.AZURE_FRONTEND_WEBAPP_NAME }}
+          images: ${{ env.ACR_REGISTRY }}/${{ env.FRONTEND_IMAGE }}:${{ needs.build-frontend.outputs.image-tag }}
